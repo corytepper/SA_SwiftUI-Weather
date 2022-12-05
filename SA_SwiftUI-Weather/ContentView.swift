@@ -9,6 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @StateObject var locationManager = LocationManager()
+    var weatherManager = NetworkManager()
+    @State var weather: ResponseBody?
+    
     @State private var isNight = false
     
     var body: some View {
